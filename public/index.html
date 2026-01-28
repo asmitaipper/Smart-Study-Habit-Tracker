@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Smart Study Habit Tracker</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <h1>Smart Study Habit Tracker</h1>
+      <p>Track your study sessions and get smart suggestions to improve.</p>
+    </header>
+
+    <main class="container">
+      <section class="form-section">
+        <h2>Add Study Session</h2>
+        <form id="session-form">
+          <div class="form-group">
+            <label for="date">Date</label>
+            <input type="date" id="date" required />
+          </div>
+
+          <div class="form-group">
+            <label for="subject">Subject / Topic</label>
+            <input type="text" id="subject" placeholder="DSA, DBMS, OS..." required />
+          </div>
+
+          <div class="form-group">
+            <label for="hours">Hours Studied</label>
+            <input type="number" id="hours" min="0" step="0.5" required />
+          </div>
+
+          <div class="form-group">
+            <label for="mood">Mood</label>
+            <select id="mood">
+              <option value="happy">Happy</option>
+              <option value="neutral" selected>Neutral</option>
+              <option value="tired">Tired</option>
+              <option value="sad">Sad</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="productivity">Productivity</label>
+            <select id="productivity">
+              <option value="high">High</option>
+              <option value="medium" selected>Medium</option>
+              <option value="low">Low</option>
+            </select>
+          </div>
+
+          <button type="submit" class="btn primary">Add Session</button>
+        </form>
+      </section>
+
+      <section class="sessions-section">
+        <h2>Your Sessions</h2>
+        <div id="sessions-list" class="sessions-list"></div>
+      </section>
+
+      <section class="analysis-section">
+        <h2>Smart Suggestions</h2>
+        <button id="refresh-suggestions" class="btn secondary">
+          Refresh Suggestions
+        </button>
+        <ul id="suggestions-list" class="suggestions-list"></ul>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Built by Asmita | Smart Study Habit Tracker</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
